@@ -21,6 +21,7 @@ html, body {
 }
 
 #welcome {
+  display: none;
   opacity: 0.85;
   color: #fff;
   position: relative;
