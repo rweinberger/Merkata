@@ -21,8 +21,31 @@
 
   <div id='welcome'>
     <h1>Merkata</h1>
+    {{#if auth}}
+    <h2> u are logged in </h2>
+    {{/if}}
     <p>Welcome to Merkata <br> can put more stuff here</p>
     <button>Explore</button>
+    {{#if auth}}
+    <form method="post" action="/logout">
+      <input type="submit" value="logout">
+    </form>
+    {{else}}
+    <form method="post" action="/signup">
+      <ul>
+        <li><input type="text" placeholder="First Name" name="first" required></li>
+        <li><input type="text" placeholder="Last Name" name="last" required></li>
+        <li><input type="text" placeholder="Email" name="email" required></li>
+        <li><input type="password" placeholder="Password" name="password" required></li>
+        <li><input name = 'signupbutton' type="submit" value="Sign Up"></li>
+      </ul>
+    </form>
+    <form method="post" action="/login">
+      <input type="text" placeholder="username" name="username" required>
+      <input type="password" placeholder="Password" name="password" required>
+      <input type="submit" value="login">
+    </form>
+    {{/if}}
   </div>
 </body>
 
