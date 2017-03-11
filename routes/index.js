@@ -14,11 +14,14 @@ router.get('/', function(req, res, next) {
   res.render('index', {auth: auth});
 });
 
-router.post('/test', function(req,res,next) {
-  var inp = req.body.inp;
-  console.log('inp: ' + inp);
-  res.redirect('/');
+router.get('/test', function(req, res, next) {
+  var auth = false
+  if(req.isAuthenticated()) {
+    auth = true
+  };
+  res.render('videobg', {auth: auth});
 });
+
 
 router.post('/signup', function (req, res, next) {
   var first = req.body.first;
