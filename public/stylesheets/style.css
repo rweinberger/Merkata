@@ -2,14 +2,19 @@
 /***********************---GENERAL---****************************/
 /****************************************************************/
 @font-face {
-  font-family: "title";
-  src: url(../fonts/OstrichSansInline-Regular.otf);
+  font-family: 'regular';
+  src: url(/fonts/AveriaSerifLibre-Light.ttf);
+}
+
+@font-face {
+  font-family: 'italic';
+  src: url(/fonts/AveriaSerifLibre-LightItalic.ttf);
 }
 
 html, body {
   height: 100%;
   width: 100%;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; 
+  font-family: 'regular'; 
 }
 
 button {
@@ -100,6 +105,7 @@ video#bgvid {
 
 #closemap:hover {
   cursor: pointer;
+  opacity: 0.5
 }
 
 #dot {
@@ -117,6 +123,17 @@ video#bgvid {
 #dot:hover {
   background-color: #d43b3b;
   cursor: pointer;
+}
+
+#dot-info {
+  display: none;
+  text-align: center;
+  width: 200px;
+  padding: 10px;
+  background-color: #666;
+  border-radius: 10px;
+  margin-top: -160px;
+  margin-left: -100px;
 }
 
 /****************************************************************/

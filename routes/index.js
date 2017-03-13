@@ -19,7 +19,7 @@ router.get('/test', function(req, res, next) {
   if(req.isAuthenticated()) {
     auth = true
   };
-  res.render('videobg', {auth: auth});
+  res.render('test', {auth: auth});
 });
 
 
