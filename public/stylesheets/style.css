@@ -103,14 +103,20 @@ video#bgvid {
 }
 
 #dot {
-  position: absolute;
-  top: 45%;
-  background-color: #a8a8a8;
-  border: solid 3px #000;
+  position: relative;
+  top: 24.5vw;
+  left: 17vw;
+  background-color: #924141;
+  border: solid 3px #fff;
   width: 15px;
   height: 15px;
   border-radius: 20px;
   z-index: 3
+}
+
+#dot:hover {
+  background-color: #d43b3b;
+  cursor: pointer;
 }
 
 /****************************************************************/
