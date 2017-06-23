@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="/scripts/fade.js" type="text/javascript"></script>
-  <script src="/scripts/map.js" type="text/javascript"></script>
+  <script src="/scripts/home-buttons.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -19,7 +19,11 @@
   <video playsinline autoplay muted loop id="bgvid">
     <source src="/video/bgvid.mp4" type="video/mp4">
   </video>
+
+  {{>nav}}
+  <button id='open-nav'>NAV</button>
   <img id='mapicon' src='/images/mapicon.png'>
+
   <div id='overlay'></div>
   <div id='map-pop'>
     <div id='closemap'>&#10005;</div>

@@ -12,6 +12,7 @@
 }
 
 html, body {
+  margin: 0;
   height: 100%;
   width: 100%;
   font-family: 'regular'; 
@@ -27,6 +28,37 @@ button {
 button:hover {
   background-color: #9c9c9c;
 }
+
+/****************************************************************/
+/*******************-------NAVBAR-------*************************/
+/****************************************************************/
+#nav{
+  display:none;
+  height: 100%;
+  width: 250px;
+  background-color: #fff;
+  border-right: solid 5px #ccc;
+}
+
+#close-nav:hover, #open-nav:hover {
+  cursor: pointer
+}
+
+.nav-item{
+  display: block;
+  width: 100%;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.nav-item:hover{
+  background-color: #ccc
+}
+
+.nav-link{
+  padding-left: 15px;
+}
+
 
 /****************************************************************/
 /*******************---BACKGROUND VID---*************************/

@@ -1,4 +1,5 @@
 $(window).on('load', function() {
+  // MAP
   $('#mapicon').on('click', function(){
     $('#welcome').fadeOut();
     $('#overlay').delay(400).fadeIn();
@@ -14,6 +15,13 @@ $(window).on('load', function() {
     $('#dot-info').show();
   }, function() {
     $('#dot-info').hide();
-  }
-);
+  });
+  // NAV
+  $('#open-nav').on('click', function(){
+    console.log('hello');
+    $('#nav').show()
+  });
+  $('#close-nav').on('click', function(){
+    $('#nav').hide()
+  });
 });
