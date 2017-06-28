@@ -33,11 +33,26 @@ button:hover {
 /*******************-------NAVBAR-------*************************/
 /****************************************************************/
 #nav{
+  color: #ccc;
+  position: fixed;
+  z-index: 2;
   display:none;
   height: 100%;
   width: 250px;
-  background-color: #fff;
-  border-right: solid 5px #ccc;
+  background-color: #202020;
+  opacity: 0.85;
+}
+
+#nav a{
+  color: #fff;
+  text-decoration: none
+}
+
+#close-nav{
+  position: absolute;
+  color: #fff;
+  right: 0;
+  padding: 10px;
 }
 
 #close-nav:hover, #open-nav:hover {
@@ -52,7 +67,7 @@ button:hover {
 }
 
 .nav-item:hover{
-  background-color: #ccc
+  background-color: #494949
 }
 
 .nav-link{
@@ -106,7 +121,6 @@ video#bgvid {
   background-image: url(/images/cleanmap.png);
   background-size: 100% auto;
   background-repeat: no-repeat;
-  padding: 30px;
   top: 4%;
   left:0;
   right: 0;
@@ -142,8 +156,8 @@ video#bgvid {
 
 #dot {
   position: relative;
-  top: 24.5vw;
-  left: 17vw;
+  top: 25vw;
+  left: 18vw;
   background-color: #924141;
   border: solid 3px #fff;
   width: 15px;

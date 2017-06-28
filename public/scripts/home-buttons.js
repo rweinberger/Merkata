@@ -18,10 +18,13 @@ $(window).on('load', function() {
   });
   // NAV
   $('#open-nav').on('click', function(){
-    console.log('hello');
-    $('#nav').show()
+    $('#nav').toggle('slide', { direction: "left" });
+    $('#open-nav').fadeTo(400, 0);
+    $('#mapicon').fadeTo(400, 0);
   });
   $('#close-nav').on('click', function(){
-    $('#nav').hide()
+    $('#nav').toggle('slide', { direction: "left" });
+    $('#open-nav').fadeTo(400, 1);
+    $('#mapicon').fadeTo(400, 1);
   });
 });
