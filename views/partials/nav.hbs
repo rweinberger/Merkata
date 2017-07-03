@@ -1,6 +1,13 @@
 <div id='nav'>
-  <div id='close-nav'>x</div>
-  <div class='nav-item'> <a class='nav-link' href='/'>link1</a> </div>
-  <div class='nav-item'> <a class='nav-link' href='/'>link2</a> </div>
-  <div class='nav-item'> <a class='nav-link' href='/'>link3</a> </div>
+  <div id='close-nav'>&#10005;</div><br><br>
+  <div class='nav-item'> <a class='nav-link' href='/'>Home</a> </div>
+  <div class='nav-item openmap'> <a class='nav-link' id='map-nav'>Map</a> </div>
+  {{#if auth}}
+  <form method="post" action="/logout" class='nav-item'>
+    <input id='logout-nav' type="submit" class='nav-link' value="Log Out">
+  </form>
+  {{else}}
+  <div class='nav-item'> <a class='nav-link' href='/login'>Log In</a> </div>
+  <div class='nav-item'> <a class='nav-link' href='/register'>Sign Up</a> </div>
+  {{/if}}
 </div>

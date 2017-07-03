@@ -14,6 +14,22 @@ router.get('/', function(req, res, next) {
   res.render('index', {auth: auth});
 });
 
+router.get('/login', function(req, res, next) {
+  var auth = false
+  if(req.isAuthenticated()) {
+    auth = true
+  };
+  res.render('index', {auth: auth, login:true, register: false});
+});
+
+router.get('/register', function(req, res, next) {
+  var auth = false
+  if(req.isAuthenticated()) {
+    auth = true
+  };
+  res.render('index', {auth: auth, login:false, register:true});
+});
+
 router.get('/guatemala', function(req, res, next) {
   var auth = false
   if(req.isAuthenticated()) {

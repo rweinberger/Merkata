@@ -1,14 +1,27 @@
-$(window).on('load', function() {
-  // MAP
-  $('#mapicon').on('click', function(){
+function toggleNav(a) {
+  $('#open-nav').fadeTo(400, a);
+  $('#nav').toggle('slide', { direction: "left" });
+};
+
+function toggleMap(a) {
+  if (a == 1) {
     $('#welcome').fadeOut();
     $('#overlay').delay(400).fadeIn();
     $('#map-pop').delay(400).fadeIn();
-  });
-  $('#closemap').on('click', function(){
+  } else {
+    $('#welcome').delay(400).fadeIn();
     $('#overlay').fadeOut();
     $('#map-pop').fadeOut();
-    $('#welcome').delay(400).fadeIn();
+  }
+}
+
+$(window).on('load', function() {
+  // MAP
+  $('.openmap').on('click', function(){
+    toggleMap(1)
+  });
+  $('#closemap').on('click', function(){
+    toggleMap(0)
   });
   $("#dot").hover(
   function() {
@@ -18,13 +31,12 @@ $(window).on('load', function() {
   });
   // NAV
   $('#open-nav').on('click', function(){
-    $('#nav').toggle('slide', { direction: "left" });
-    $('#open-nav').fadeTo(400, 0);
-    $('#mapicon').fadeTo(400, 0);
+    toggleNav(0)
   });
   $('#close-nav').on('click', function(){
-    $('#nav').toggle('slide', { direction: "left" });
-    $('#open-nav').fadeTo(400, 1);
-    $('#mapicon').fadeTo(400, 1);
+    toggleNav(1)
   });
+  $('#map-nav').on('click', function(){
+    toggleNav(1)
+  })
 });

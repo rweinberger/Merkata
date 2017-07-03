@@ -23,8 +23,8 @@ var users = require('./routes/users');
 var app = express();
 
 // database setup
-// mongoose.connect('mongodb://localhost/merkata');
-mongoose.connect('mongodb://heroku_jmm3n35z:2ne94on32l99u5rjcfv7ecd39e@ds129610.mlab.com:29610/heroku_jmm3n35z');
+mongoose.connect('mongodb://localhost/merkata');
+// mongoose.connect('mongodb://heroku_jmm3n35z:2ne94on32l99u5rjcfv7ecd39e@ds129610.mlab.com:29610/heroku_jmm3n35z');
 var connection = mongoose.connection;
 connection.on('error', console.error.bind(console, 'connection error:'));
 connection.on('connected', function() {
