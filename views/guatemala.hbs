@@ -10,8 +10,15 @@
 
   {{>map}}
 
+  <div class="cyclotron nonContinuous" style="background:url(/images/pano1-edit.JPG); background-size: cover "></div>
+  <div id='testdot'></div>
+  </body>
 
 <script src="/scripts/home-buttons.js" type="text/javascript"></script>
-</body>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.cyclotron').cyclotron({dampingFactor:0.9,autorotation:0});
+  });
+</script>
 
 </html>
